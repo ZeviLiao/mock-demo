@@ -1,24 +1,32 @@
 <template>
     <div class="hello">
 
-        <button @click="onSubmit">click me</button>
+        <button @click="onSubmit">click mockjs</button>
 
     </div>
 </template>
 
 <script>
+    /* eslint-disable */
+
     import axios from 'axios'
     import './mock'
+    // import './mock-ax'
+
 
     export default {
         name: 'HelloWorld',
         props: {
             msg: String
         },
+        data() {
+            return {
+                data: null
+            }
+        },
         methods: {
             onSubmit() {
                 axios.get('https://jsonplaceholder.typicode.com/todos/1').then(res => {
-                    // eslint-disable-next-line
                     console.log(res.data);
                 })
             }
