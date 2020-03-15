@@ -7,9 +7,8 @@
 <script>
 /* eslint-disable */
 
-import axios from "axios";
-import "./mock";
-// import './mock-ax'
+import "./mock-ax";
+import { getUser } from '@/api/message'
 
 export default {
   name: "HelloWorld",
@@ -23,12 +22,12 @@ export default {
   },
   methods: {
     onSubmit() {
-      axios.get("https://jsonplaceholder.typicode.com/todos/1").then(res => {
-        console.log(res.data);
+      getUser(2).then(res => {
+        console.log(res);
       });
-      axios.get("https://jsonplaceholder.typicode.com/todos/2").then(res => {
-        console.log(res.data);
-      });
+      //   axios.get("https://jsonplaceholder.typicode.com/todos/2").then(res => {
+      //     console.log(res.data);
+      //   });
     }
   }
 };

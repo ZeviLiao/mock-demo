@@ -17,5 +17,6 @@ mock.onGet(/\/todos\/2/).reply(200, {
   ]
 });
 
+mock.restore();
 
 export default mock;
