@@ -6,3 +6,11 @@ export function getUser(id) {
     method: "get"
   });
 }
+
+export function createData(data) {
+  return request({
+    url: `/todos`,
+    method: "post",
+    data
+  });
+}

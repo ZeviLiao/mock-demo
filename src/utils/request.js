@@ -13,8 +13,11 @@ import constants from "@/utils/constants";
 /**
  * Create an Axios Client with defaults
  */
+
+const token = "abc";
 const client = axios.create({
-  baseURL: constants.api.url
+  baseURL: constants.api.url,
+  headers: { authorization: `Bearer ${token}` }
 });
 
 /**
